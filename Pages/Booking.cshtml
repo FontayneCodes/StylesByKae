@@ -1,0 +1,30 @@
+@page
+@model BookingModel
+@{
+    ViewData["Title"] = "Book Appointment";
+}
+{
+<h2>Book an Appointment</h2>
+<form method="post">
+    <label>Full Name:</label>
+    <input type="text" name="ClientName" required />
+
+    <label>Email:</label>
+    <input type="email" name="Email" required />
+
+    <label>Select Service:</label>
+    <select name="Service">
+        <option value="Silk Press">Silk Press - $65</option>
+        <option value="Natural Style">Natural Style - $45</option>
+        <option value="Trim & Condition">Trim & Condition - $30</option>
+    </select>
+
+    <label>Date:</label>
+    <input type="date" name="Date" required />
+
+    <label>Time:</label>
+    <input type="time" name="Time" required />
+
+    <button type="submit">Book Now</button>
+</form>
+}

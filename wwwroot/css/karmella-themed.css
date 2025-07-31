@@ -1,0 +1,127 @@
+
+/* ===================== THEME COLORS ===================== */
+:root {
+    --color-teal: #008080;
+    --color-gold: #D4AF37;
+    --color-black: #1C1C1C;
+    --color-soft-white: #F9F9F9;
+}
+
+/* ===================== HERO SECTION ===================== */
+.hero-section .lead.fst-italic {
+    color: #ffffff;
+    font-size: 8rem;
+    text-shadow: 0 0 10px rgba(255,255,255,0.6), 0 0 20px rgba(255,255,255,0.4);
+}
+
+.hero-section::before {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-text p {
+    color: var(--color-teal);
+}
+.btn-light {
+    background-color: var(--color-teal);
+    color: white;
+}
+.btn-outline-light {
+    border: 2px solid var(--color-gold);
+    color: var(--color-white);
+    transition: all 0.3s ease;
+}
+.btn-outline-light:hover {
+    background-color: var(--color-gold);
+    color: var(--color-black);
+}
+
+/* ===================== ABOUT SECTION ===================== */
+.about-section h2 {
+    color: var(--color-black);
+}
+.about-section p {
+    color: var(--color-black);
+}
+.about-section .btn-dark {
+    background-color: var(--color-teal);
+    color: white;
+    transition: all 0.3s ease;
+}
+.about-section .btn-dark:hover {
+    background-color: var(--color-gold);
+    color: var(--color-black);
+}
+
+/* ===================== TESTIMONIALS ===================== */
+
+.testimonials-section h2 {
+    color: var(--color-white);
+    text-shadow: 0 0 4px #000;
+}
+.quote-icon {
+    color: var(--color-gold);
+}
+
+/* ===================== GALLERY SECTION ===================== */
+
+.container.my-5 {
+    background-color: var(--color-black);
+    padding: 4rem 1rem;
+    border-radius: 20px;
+}
+
+
+
+.img-fluid {
+    border: 3px solid var(--color-teal);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .img-fluid:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px var(--color-teal);
+    }
+
+.text-center.my-5 {
+    background-color: var(--color-);
+    color: white;
+    padding: 4rem 2rem;
+    border-radius: 16px;
+}
+.text-center.my-5 h2 {
+    color: var(--color-white);
+}
+.text-center.my-5 .btn {
+    background-color: var(--color-teal);
+    color: white;
+}
+.text-center.my-5 .btn:hover {
+    background-color: var(--color-gold);
+    color: var(--color-black);
+}
+
+/* ===================== FOOTER ===================== */
+.site-footer {
+    background-color: var(--color-);
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.footer-heading {
+    color: var(--color-white);
+}
+.footer-container {
+    background-color: var(--color-);
+    color: var(--color-teal);
+    padding: 30px 20px;
+}
+.site-footer a,
+.dev-credit-link {
+    color: var(--color-teal);
+    text-decoration: underline;
+}
+    .site-footer a:hover,
+    .dev-credit-link:hover {
+        color: var(--color-teal);
+        text-decoration: underline;
+    }

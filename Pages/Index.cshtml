@@ -1,0 +1,138 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+
+<!-- HERO SECTION -->
+<section class="hero-section text-white text-center">
+    <div class="hero-text text-center">
+        <h1 class="display-4 fw-bold">Your Hair, Your Identity</h1>
+        <p class="lead fst-italic">Our Expertise</p>
+        <div class="mt-4">
+            <a href="https://app.squareup.com/appointments/buyer/widget/xmf1z2ab7gvv8c/LTK8WRYMMZMZV" class="btn btn-dark mt-4">BOOK NOW</a>
+            <a href="#about" class="btn btn-outline-light btn-lg learn-more">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<!-- wave divider -->
+<!-- ABOUT SECTION -->
+<section class="about-section py-7" id="about">
+    <div class="about-inner px-5 py-5 shadow rounded-4  mx-auto" style="max-width: 1200px;">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0 text-center">
+                <img src="/images/karmella-profile-new.jpg" alt="Karmella" class="expert-img" />
+            </div>
+            <div class="col-md-6">
+                <h2 class="fw-bold display-5 mb-4">Meet Your Expert</h2>
+                <p class="fs-5">
+                    Karmella is a licensed stylist with a passion for healthy, beautiful hair. From sleek styles to protective braids, she brings out the best in every client. Her mission? Make you feel as good as you look.
+                </p>
+                <a href="https://app.squareup.com/appointments/buyer/widget/xmf1z2ab7gvv8c/LTK8WRYMMZMZV" class="btn btn-dark mt-4">BOOK NOW</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section py-5 text-center">
+    <div class="bg-overlay">
+        <div class="testimonial-inner mx-auto px-4" style="max-width: 800px;">
+            <h2 class="mb-5 fw-bold" style="font-family: 'Playfair Display', serif;">Here's What Others Think</h2>
+
+            <div id="testimonialCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <blockquote class="testimonial-card position-relative">
+                            <i class="quote-icon">“</i>
+                            <p>"Karmella made me feel so comfortable. My hair looks amazing and I’ve already booked again!"</p>
+                            <footer class="blockquote-footer mt-3">– Alicia B.</footer>
+                        </blockquote>
+                    </div>
+                    <div class="carousel-item">
+                        <blockquote class="testimonial-card position-relative">
+                            <i class="quote-icon">“</i>
+                            <p>"Best stylist in town, hands down. She listened and brought my vision to life."</p>
+                            <footer class="blockquote-footer mt-3">– Jasmine T.</footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <!-- Light, elegant arrows outside the quote box -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-arrow">&#10094;</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-arrow">&#10095;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- GALLERY -->
+<section class="gallery-section my-5 text-center">
+    <h2 class="mb-4">It’s Okay to Take a Peep</h2>
+    <div class="row g-3">
+        @for (int i = 1; i <= 9; i++)
+        {
+        <div class="col-6 col-md-4">
+            <img src="/images/gallery/photo1.jpg" class="img-fluid rounded shadow-sm" alt="Client Style @i" />
+        </div>
+        }
+    </div>
+</section>
+
+<!-- SERVICE HIGHLIGHT -->
+<!-- CTA -->
+<section class="cta-section text-center my-5 booking-widget">
+    <h2 class="mb-3">What Are You Waiting For?</h2>
+    <a href="https://app.squareup.com/appointments/buyer/widget/xmf1z2ab7gvv8c/LTK8WRYMMZMZV" class="btn btn-dark mt-4">BOOK NOW</a>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="site-footer text-center text-md-start border-top mt-5">
+    <div class="footer-container py-5">
+        <div class="row align-items-start">
+            <!-- Logo + Tagline -->
+            <div class="col-md-4 mb-4">
+                <img src="/images/logo-footer.png" alt="Touch By Kae's Hair Studio" style="height: 40px;" class="mb-2">
+                <p class="small">Where confidence begins with great hair.</p>
+            </div>
+
+            <!-- Contact Info -->
+            <div id="contact" class="col-md-4 mb-4">
+                <h6 class="footer-heading fw-bold text-uppercase">Contact</h6>
+                <p class="mb-1"><i class="bi bi-telephone"></i> (309) 555-1234</p>
+                <p class="mb-1"><i class="bi bi-envelope"></i> hello@karmellashair.com</p>
+            </div>
+
+            <!-- Hours -->
+            <div class="col-md-4 mb-4">
+                <h6 class="footer-heading fw-bold text-uppercase">Salon Hours</h6>
+                <p class="mb-1">Wed–Sat: <strong>9am–7pm</strong></p>
+                <p class="mb-1">Closed: Sun–Tues</p>
+            </div>
+        </div>
+
+        <!-- Bottom Row -->
+        <div class="d-flex justify-content-between flex-column flex-md-row align-items-center border-top pt-4 mt-4 px-3">
+            <div class="small text-muted text-center text-md-start mb-2 mb-md-0">
+                &copy; 2025 Karmella’s Hair Studio. All rights reserved. · <a href="/Privacy">Privacy Policy</a>
+            </div>
+            <div class="small text-muted text-center text-md-end">
+                Developed by:
+                <a href="https://www.fontayneporter.com/" class="dev-credit-link">
+                    Designed with clarity. Coded with confidence by Fontayne Porter.
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>

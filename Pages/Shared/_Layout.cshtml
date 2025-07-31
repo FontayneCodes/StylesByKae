@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DemoHairSite</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- In _Layout.cshtml -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/karmella-themed.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/DemoHairSite.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="sticky-top shadow-sm py-3 custom-sticky">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-lg shadow-sm py-3 custom-nav">
+                <div class="container d-flex justify-content-between align-items-center">
+
+                    <!-- Brand & Toggler -->
+                    <div class="d-flex justify-content-between align-items-center w-100">
+                        <a class="navbar-brand text-logo">
+                            <span class="text-logo-main">Touch By Kae’s</span>
+                            <span class="text-logo-sub">Hair Studio</span>
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+
+                    <!-- Navigation Links -->
+                    <div class="collapse navbar-collapse justify-content-end mt-3 mt-lg-0" id="navbarNav">
+                        <ul class="navbar-nav gap-3">
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold" href="#pricing">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold" href="#contact">Contact</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown">
+                                    More
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#gallery">Gallery</a></li>
+                                    <li><a class="dropdown-item" href="#testimonials">Testimonials</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+
+
+    </header>
+
+    <!-- Removed container here -->
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!-- Start Square Appointments Embed Code -->
+    <script src="https://app.squareup.com/appointments/buyer/widget/xmf1z2ab7gvv8c/LTK8WRYMMMZMV.js"></script>
+    <!-- End Square Appointments Embed Code -->
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

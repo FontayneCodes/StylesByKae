@@ -1,0 +1,19 @@
+@page
+@model DemoHairSite.Pages.ContactPageModel
+
+@{
+    ViewData["Title"] = "Contact";
+}
+<form method="post">
+    <input asp-for="ContactForm.Name" />
+    <input asp-for="ContactForm.Email" />
+    <textarea asp-for="ContactForm.Message"></textarea>
+    <button type="submit">Send</button>
+</form>
+
+<footer>
+    <p>📍 Decatur, IL | 📞 (555) 123-4567</p>
+    <div class="socials">
+        <a href="#">Instagram</a> | <a href="#">Facebook</a>
+    </div>
+</footer>

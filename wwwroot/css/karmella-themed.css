@@ -100,7 +100,7 @@
     color: var(--color-black);
 }
 
-/* ===================== FOOTER ===================== */
+/* ===================== FOOTER ===================== 
 .site-footer {
     background-color: var(--color-);
     color: white;
@@ -123,5 +123,35 @@
     .site-footer a:hover,
     .dev-credit-link:hover {
         color: var(--color-teal);
+        text-decoration: underline;
+    }
+*/
+.site-footer {
+    background-color: var(--color-black); /* use real variable */
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.footer-heading {
+    color: var(--color-gold); /* use your theme gold */
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.footer-container {
+    padding: 30px 20px;
+}
+
+.site-footer a,
+.dev-credit-link {
+    color: var(--color-teal);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+    .site-footer a:hover,
+    .dev-credit-link:hover {
+        color: var(--color-gold);
         text-decoration: underline;
     }

@@ -75,16 +75,33 @@
 </section>
 
 
+@{
+    var imageFiles = new[] {
+        "photo1.jpg",
+        "photo2.jpg",
+        "photo3.jpg",
+        "photo4.jpg",
+        "photo5.jpg",
+        "photo6.jpg",
+        "photo7.jpg",
+        "photo8.jpg"
+    };
+}
+
 <!-- GALLERY -->
 <section class="gallery-section my-5 text-center">
     <h2 class="mb-4">It’s Okay to Take a Peep</h2>
-    <div class="row g-3">
-        @for (int i = 1; i <= 9; i++)
-        {
-        <div class="col-6 col-md-4">
-            <img src="/Images/Gallery/photo1.jpg" class="img-fluid rounded shadow-sm" alt="Client Style @i" />
+    <div class="container">
+        <div class="row g-4">
+            @foreach (var file in imageFiles)
+            {
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="gallery-item">
+                    <img src="@($"/Images/Gallery/{file}")" class="img-fluid rounded shadow-sm" alt="Client Style" />
+                </div>
+            </div>
+            }
         </div>
-        }
     </div>
 </section>
 
@@ -98,41 +115,33 @@
 
 
 <!-- FOOTER -->
-<footer class="site-footer text-center text-md-start border-top mt-5">
-    <div class="footer-container py-5">
-        <div class="row align-items-start">
+<footer class="site-footer text-white border-top mt-5 pt-5 pb-4" style="background-color: #111;">
+    <div class="container">
+        <div class="row text-center text-md-start">
             <!-- Logo + Tagline -->
             <div class="col-md-4 mb-4">
-                <img src="/Images/Gallery/logo-footer.png" alt="Touch By Kae's Hair Studio" style="height: 40px;" class="mb-2">
-                <p class="small">Where confidence begins with great hair.</p>
+                <img src="/Images/Gallery/logo-footer.png" alt="Touch By Kae's Hair Studio" style="height: 50px;" class="mb-3">
+                <p class="text-muted small">Where confidence begins with great hair.</p>
             </div>
 
             <!-- Contact Info -->
-            <div id="contact" class="col-md-4 mb-4">
-                <h6 class="footer-heading fw-bold text-uppercase">Contact</h6>
-                <p class="mb-1"><i class="bi bi-telephone"></i> (309) 555-1234</p>
-                <p class="mb-1"><i class="bi bi-envelope"></i> hello@karmellashair.com</p>
+            <div class="col-md-4 mb-4">
+                <h6 class="text-uppercase fw-bold mb-3" style="color: var(--color-gold);">Contact</h6>
+                <p class="mb-2"><i class="bi bi-telephone me-2"></i> <span style="color: #ccc;">(217) 413-8687</span></p>
+                <p><i class="bi bi-envelope me-2"></i> <a href="mailto:hello@karmellashair.com" style="color: #ccc; text-decoration: none;">hello@karmellashair.com</a></p>
             </div>
 
-            <!-- Hours -->
+            <!-- Salon Hours -->
             <div class="col-md-4 mb-4">
-                <h6 class="footer-heading fw-bold text-uppercase">Salon Hours</h6>
-                <p class="mb-1">Wed–Sat: <strong>9am–7pm</strong></p>
-                <p class="mb-1">Closed: Sun–Tues</p>
+                <h6 class="text-uppercase fw-bold mb-3" style="color: var(--color-gold);">Salon Hours</h6>
+                <p class="mb-2">Wed–Sat: <strong>9am–7pm</strong></p>
+                <p class="mb-0">Closed: Sun–Tues</p>
             </div>
         </div>
 
-        <!-- Bottom Row -->
-        <div class="d-flex justify-content-between flex-column flex-md-row align-items-center border-top pt-4 mt-4 px-3">
-            <div class="small text-muted text-center text-md-start mb-2 mb-md-0">
-                &copy; 2025 Karmella’s Hair Studio. All rights reserved. · <a href="/Privacy">Privacy Policy</a>
-            </div>
-            <div class="small text-muted text-center text-md-end">
-                Developed by:
-                <a href="https://www.fontayneporter.com/" class="dev-credit-link">
-                    Designed with clarity. Coded with confidence by Fontayne Porter.
-                </a>
-            </div>
+        <div class="border-top pt-3 mt-4 text-center small text-muted">
+            &copy; 2025 Touch By Kae’s Hair Studio. All rights reserved. · <a href="/Privacy">Privacy Policy</a> · Built by <a href="https://www.fontayneporter.com" class="text-muted text-decoration-underline">Fontayne Porter</a>
         </div>
     </div>
+
 </footer>

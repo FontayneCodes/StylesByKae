@@ -13,11 +13,11 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error");
-    app.UseHsts(); // Use HSTS in non-dev environments
+   // app.UseExceptionHandler("/Error");
+    //app.UseHsts(); // Use HSTS in non-dev environments
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseStaticFiles(); // ✅ This serves CSS, JS, images, etc.
 
 app.UseRouting();
